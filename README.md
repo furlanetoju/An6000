@@ -39,3 +39,28 @@ show snmp-agent trap-receiver
 snmp-time interval 3600 servip ipv4 10.111.0.254
 show snmp-time
 ```
+**Autorizar uma ONU Bridge**
+
+```
+show discovery
+interface pon 1/x/x
+VZP-02(config-if-pon-1/1/1)# whitelist add phy-id {mac} type {model}
+VZP-02(config-if-pon-1/1/1)# onu port vlan {onu-id} eth 1 service 1 tag priority 7 tpid 33024 vid {vlan} 
+```
+**Descobrir a ONU-ID number**
+```
+VZP-02(config-if-pon-1/1/1)# show online onuinfo | begin {mac}
+```
+**Exemplo de script**
+
+```
+show discovery
+interface pon 1/1/1
+VZP-02(config-if-pon-1/1/1)# whitelist add phy-id FHTT076f0af0 type 5506-01-A1
+VZP-02(config-if-pon-1/1/1)# onu port vlan 1 eth 1 service 1 tag priority 7 tpid 33024 vid 101 
+
+VZP-02(config)# show whitelist phy-id 1/1/1 FHTT076f0af0
+VZP-02(config-if-pon-1/1/1)# show online onuinfo | begin FHTT076f0af0
+
+```
+
