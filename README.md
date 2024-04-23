@@ -63,4 +63,13 @@ VZP-02(config)# show whitelist phy-id 1/1/1 FHTT076f0af0
 VZP-02(config-if-pon-1/1/1)# show online onuinfo | begin FHTT076f0af0
 
 ```
+**Como autorizar uma ONT**
+```
+show discovery
+interface pon 1/{slot}/{pon}
+onu wan-cfg {onu-id} index 1 mode internet type route {vlan} 7 nat enable qos disable vlanmode tag tvlan disable 0 0 dsp pppoe proxy disable {username} {password} {serve-name} auto entries 6 fe1 fe2 fe3 fe4 ssid1 ssid5
+onu ipv6-wan-cfg {onu-id} ind 1 ip-stack-mode ipv4 ipv6-src-type dhcpv6 prefix-src-type delegate 
+```
+
+
 
