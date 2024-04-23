@@ -43,7 +43,7 @@ show snmp-time
 
 ```
 show discovery
-interface pon 1/x/x
+interface pon 1/{slot}/{pon}
 VZP-02(config-if-pon-1/1/1)# whitelist add phy-id {mac} type {model}
 VZP-02(config-if-pon-1/1/1)# onu port vlan {onu-id} eth 1 service 1 tag priority 7 tpid 33024 vid {vlan} 
 ```
