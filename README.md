@@ -71,5 +71,8 @@ onu wan-cfg {onu-id} index 1 mode internet type route {vlan} 7 nat enable qos di
 onu ipv6-wan-cfg {onu-id} ind 1 ip-stack-mode ipv4 ipv6-src-type dhcpv6 prefix-src-type delegate 
 ```
 
-
-
+**Como ver sinal**
+```
+interface pon 1/{slot}/{pom}
+show onu optical-info {onu-id}
+```
