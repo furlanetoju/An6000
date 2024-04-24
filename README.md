@@ -39,6 +39,14 @@ show snmp-agent trap-receiver
 snmp-time interval 3600 servip ipv4 10.111.0.254
 show snmp-time
 ```
+
+**Visualizar versão de compilação da controladora**
+```
+diagnose
+show debugversion
+```
+-------------------------------------------------------------------------------------------------------
+
 **Autorizar uma ONU Bridge**
 
 ```
