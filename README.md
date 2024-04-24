@@ -76,3 +76,8 @@ onu ipv6-wan-cfg {onu-id} ind 1 ip-stack-mode ipv4 ipv6-src-type dhcpv6 prefix-s
 interface pon 1/{slot}/{pom}
 show onu optical-info {onu-id}
 ```
+
+**Evitar logout da OLT**
+```
+VZP-02(config)# idle-timeout 255
+```
