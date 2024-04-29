@@ -96,3 +96,8 @@ VZP-02(config)# port vlan 2801 to 2816 tag 1/8 1
 VZP-02(config)# port vlan 2801 to 2816 allslot
 ```
 No exemplo acima, criamos da vlan `2801` a `2816` apontando para a porta master do nosso trunk, que no caso é `1/8 1`. Depois repetimos o comando, informando que vamos autorizar essa vlan em todos os cartões `allslot`
+
+**Adicionar o profile na ONU**
+```
+onu bandwidth-profile {onu-id} profile-name {700M}
+```
