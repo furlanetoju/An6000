@@ -97,6 +97,12 @@ VZP-02(config)# port vlan 2801 to 2816 allslot
 ```
 No exemplo acima, criamos da vlan `2801` a `2816` apontando para a porta master do nosso trunk, que no caso é `1/8 1`. Depois repetimos o comando, informando que vamos autorizar essa vlan em todos os cartões `allslot`
 
+**Como localizar a ONU atraves do MAC do roteador**
+
+```
+VZP-02(config)# show mac-address port 1/16/15 | begin ec:ad:e0:d3:8d:cc
+```
+
 **Adicionar o profile na ONU**
 ```
 onu bandwidth-profile {onu-id} profile-name {700M}
