@@ -24,7 +24,7 @@ show ip address
 
 **Configuração para mostrar tudo de uma vez no console, sem ter que ficar dando espaço ou enter**
 ```
-VZP-2(config)# terminal length 0
+VZP-2(config)# terminal length 512
 ```
 
 
