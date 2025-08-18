@@ -163,3 +163,9 @@ onu mac: 90:55:DE:A3:06:03
 --------------------------------------
 
 ```
+**Como mudar usuário e senha web da ONT FiberHome via CLI**
+
+```
+VZP-1(config-if-pon-1/10/1)# onu web-cfg 15 index 1 web-user admin web-password Xxxxx1@ group admin 
+Set OK!
+```
