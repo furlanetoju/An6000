@@ -134,3 +134,32 @@ slot   14:  1579/1689       0/0       1579/1689       0/0
 slot   16:  1498/1582       0/0       1498/1582       0/0    
 ------------------------------------------------------------
 ```
+
+**Como verificar as informações da wan de uma ONT**
+
+```
+VZP-1(config-if-pon-1/10/1)# show onu wan-info 15
+
+--------------------------------------
+wan_index: 1
+wan_name: INTERNET_R_VID_2617
+wan_vlan: 2617
+wan_cos: 65535
+connect_type: ROUTE 
+wan_dsp: PPPOE 
+qos_status: disable 
+wan_status: up 
+stack_mode: ipv4 
+wan_ip: 100.64.19.250/255.255.255.255 
+wan_gateway: 100.64.0.1 
+wan_masterdns: 100.100.100.100 
+wan_slavedns: 1.1.1.1 
+ipv6-address: ::/0
+ipv6-gateway: ::
+wan_ipv6_master_dns: ::
+wan_ipv6_slave_dns: ::
+wan_ipv6_static_prefix: ::/0
+onu mac: 90:55:DE:A3:06:03
+--------------------------------------
+
+```
